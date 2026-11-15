@@ -69,15 +69,15 @@
   звонка: Binding к STUN-серверу, Allocate к TURN-релею, тот же Allocate с
   учётными данными и проверки связности ICE. Каждый пакет разбирается тестами
   как STUN по RFC 8489: длины, выравнивание атрибутов, FINGERPRINT.
-- **I1-I5 влезают в ядерный модуль** ([#17](https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT/issues/17)).
+- **I1-I5 влезают в ядерный модуль** ([#17](https://github.com/VAIPROG/Any-Tech-ARCHITECT/issues/17)).
   Модуль принимает всю цепочку одним netlink-сообщением размером в страницу.
   Пять SIP-пакетов в него не помещались, интерфейс поднимался, а `awg show`
   отвечал `Message too long`. Генератор теперь держит цепочку в бюджете, а
   проверка конфига предупреждает о чужих, которые в него не влезут.
-- **wg-easy в списке клиентов** ([#18](https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT/issues/18)).
+- **wg-easy в списке клиентов** ([#18](https://github.com/VAIPROG/Any-Tech-ARCHITECT/issues/18)).
   Панель принимает H1-H4 только до 2 147 483 647, и диапазоны для неё теперь
   раскладываются под этот потолок.
-- **Цена ширины H1-H3** ([#14](https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT/issues/14)).
+- **Цена ширины H1-H3** ([#14](https://github.com/VAIPROG/Any-Tech-ARCHITECT/issues/14)).
   С `RandomTrailers` приёмник примеряет каждый транспортный пакет к H1-H3 и
   молча теряет попавшие внутрь. Проверка конфига считает долю потерь и
   предупреждает, а `RandomTrailers` помечен как параметр, который должен
@@ -302,7 +302,7 @@ Fonts. Вся случайность берётся из `crypto.getRandomValues
 **Онлайн:** [architect.vai-rice.space](https://architect.vai-rice.space/)
 
 ```bash
-git clone https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT.git
+git clone https://github.com/VAIPROG/Any-Tech-ARCHITECT.git
 cd Any-Tech-ARCHITECT
 bun install
 bun run dev
@@ -353,7 +353,7 @@ python, а `--check` покажет, что нашлось, ничего не з
 
 Конфигурация это половина дела, вторая половина это сервер, который её примет.
 Для этого есть отдельный проект:
-**[awg-containers-and-tools](https://github.com/Vadim-Khristenko/awg-containers-and-tools)**,
+**[awg-containers-and-tools](https://github.com/VAIPROG/awg-containers-and-tools)**,
 контейнеры AmneziaWG под версии протокола и утилита `awg-tool` для
 развёртывания.
 
@@ -393,7 +393,7 @@ git clone https://git.vai-rice.space/vai_prog/Any-Tech-ARCHITECT.git
 ## Нашли баг или есть идея?
 
 Пишите, это лучший способ починить то, о чём мы не знаем. Заводите
-[issue](https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT/issues) и
+[issue](https://github.com/VAIPROG/Any-Tech-ARCHITECT/issues) и
 присоединяйтесь к обсуждению в чате.
 
 Если проблема в конкретном конфиге, приложите версию AmneziaWG или Xray, клиент

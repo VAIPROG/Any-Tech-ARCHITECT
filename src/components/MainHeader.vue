@@ -315,7 +315,7 @@ onUnmounted(() => {
                 </div>
 
                 <a
-                    href="https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT"
+                    href="https://github.com/VAIPROG/Any-Tech-ARCHITECT"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="gh-link"
@@ -409,7 +409,7 @@ onUnmounted(() => {
 
                 <div class="mobile-footer">
                     <a
-                        href="https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT"
+                        href="https://github.com/VAIPROG/Any-Tech-ARCHITECT"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="mobile-gh"

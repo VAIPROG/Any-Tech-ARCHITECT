@@ -68,15 +68,15 @@ or 3.1 and they move to where that version recommends. The "Recommended for
   a Binding to a STUN server, an Allocate to a TURN relay, the same Allocate
   with credentials, and ICE connectivity checks. Tests parse every packet as
   STUN per RFC 8489: lengths, attribute alignment, FINGERPRINT.
-- **I1-I5 fit the kernel module** ([#17](https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT/issues/17)).
+- **I1-I5 fit the kernel module** ([#17](https://github.com/VAIPROG/Any-Tech-ARCHITECT/issues/17)).
   The module takes the whole chain in one netlink message of a page. Five SIP
   packets did not fit: the interface came up and `awg show` answered
   `Message too long`. The generator now keeps the chain within budget, and the
   config check warns about ones from elsewhere that will not fit.
-- **wg-easy in the client list** ([#18](https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT/issues/18)).
+- **wg-easy in the client list** ([#18](https://github.com/VAIPROG/Any-Tech-ARCHITECT/issues/18)).
   The panel accepts H1-H4 only up to 2,147,483,647, and ranges for it are now
   laid out under that cap.
-- **What H1-H3 width costs** ([#14](https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT/issues/14)).
+- **What H1-H3 width costs** ([#14](https://github.com/VAIPROG/Any-Tech-ARCHITECT/issues/14)).
   With `RandomTrailers`, the receiver tests every transport packet against
   H1-H3 and silently drops the ones that land inside. The config check works
   out the share lost and warns, and `RandomTrailers` is now marked as a value
@@ -305,7 +305,7 @@ Save the page with <kbd>Ctrl</kbd>+<kbd>S</kbd> and it works offline.
 **Online:** [architect.vai-rice.space](https://architect.vai-rice.space/en)
 
 ```bash
-git clone https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT.git
+git clone https://github.com/VAIPROG/Any-Tech-ARCHITECT.git
 cd Any-Tech-ARCHITECT
 bun install
 bun run dev
@@ -356,7 +356,7 @@ the browser for now:
 
 A configuration is half the job; the other half is a server that accepts it.
 That is a separate project:
-**[awg-containers-and-tools](https://github.com/Vadim-Khristenko/awg-containers-and-tools)**,
+**[awg-containers-and-tools](https://github.com/VAIPROG/awg-containers-and-tools)**,
 AmneziaWG containers for the protocol versions and an `awg-tool` utility to
 deploy them.
 
@@ -396,7 +396,7 @@ signatures before installing.
 ## Found a bug, or have an idea?
 
 Please say so: it is the best way to fix what we do not know about. Open an
-[issue](https://github.com/Vadim-Khristenko/Any-Tech-ARCHITECT/issues) and join
+[issue](https://github.com/VAIPROG/Any-Tech-ARCHITECT/issues) and join
 the discussion in the chat.
 
 If the problem is a specific config, include the AmneziaWG or Xray version, the
